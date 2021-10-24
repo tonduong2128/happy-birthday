@@ -19,21 +19,25 @@
         <div class="container d-flex flex-column align-items-center h-100" style="font-family: 'PT Sans Caption', sans-serif;">
             <div class="app-title pt-3 text-center" 
             >Happy Birthday To You</div>
-            <div class="app-title text-center" style="font-size:30px;" >Nhận quà chứ ?</div>
+            <div class="app-title text-center" style="font-size:30px;" >Would you like to receive a gift?</div>
             <div class="btn-wrapper position-relative w-100 flex-grow-1 text-center">
                 <button id="button-custom" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal"  
-                    class="btn btn-outline-danger button-custom">Thôi Thôi
+                    class="btn btn-outline-danger button-custom">No No
                 </button>
                 <button id="button-custom" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal2"  
-                    class="btn btn-outline-danger button-custom">Change
+                    class="btn btn-outline-danger button-custom">Challenges
                 </button>
                 <div class="position-absolute btn-agree" style="z-index: 2;">
                     <button type="button" class="btn btn-primary button-custom" >
-                      Nhận
+                        Give me
                     </button>
                 </div>
             </div>
             
+            <!-- Vertically centered modal -->
+            <div class="modal-dialog modal-dialog-centered">
+                ...
+            </div>
             <lottie-player 
                 src="https://assets4.lottiefiles.com/packages/lf20_yoltywwd.json"  
                 background="transparent"  
@@ -51,9 +55,7 @@
                         width: 100px;
                         text-align: center;
                 ">
-                    Làm sao mà nhận được
-                    <br>
-                    Làm sao mà nhận được
+                   
                 </div> 
                 <lottie-player src="https://assets2.lottiefiles.com/packages/lf20_sDO0PX.json"  
                     background="transparent"  
@@ -67,7 +69,7 @@
     </div>
     
   <!-- Modal -->
-    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal fade " id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
@@ -97,13 +99,16 @@
         </div>
         <div class="modal-body">
             <h5 class="modal-title" id="exampleModalLabel">Tính tích phân sau</h5>
+            <img src="./img/math.PNG" style="width:100%;" alt="">
+            <label for="example">Đán án</label>
+            <input id="example" />
             <!-- facebook: <a href="https://www.facebook.com/TonDuong.IT/" target="_blank" >facebook:</a>
             <br>
             phone: <a href="tel:0987795761">0987795761</a> -->
         </div>
         <div class="modal-footer">
             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Đóng</button>
-            <button type="button" class="btn btn-primary" data-bs-dismiss="modal"> ok </button>
+            <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Tiếp</button>
         </div>
         </div>
         </div>

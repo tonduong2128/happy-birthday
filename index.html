@@ -16,7 +16,7 @@
 <body>
     
     <div class="wrapper-app" style="position: relative;">
-        <div class="container d-flex flex-column align-items-center h-100" style="font-family: 'PT Sans Caption', sans-serif;">
+        <div class="wrapper-app-container text-center container d-flex flex-column align-items-center h-100" style="font-family: 'PT Sans Caption', sans-serif;">
             <div class="app-title pt-3 text-center" 
             >Happy Birthday To You</div>
             <div class="app-title text-center" style="font-size:30px;" >Would you like to receive a gift?</div>
@@ -39,9 +39,10 @@
                 src="https://assets4.lottiefiles.com/packages/lf20_yoltywwd.json"  
                 background="transparent"  
                 speed="1"  
-                style="width: 300px; height: 300px; position: absolute; left: 0; z-index: 0;"  
+                style="position: absolute; left: 0; z-index: 0;"  
                 loop  
-                autoplay>
+                autoplay
+                class="a-dog">
             </lottie-player>
             <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
             <div style="position: absolute; right: 0; z-index: 0;">
@@ -133,6 +134,10 @@
             font-size:16px;  
             transition: all 0.2s ease-in-out 0s;
         }
+        .a-dog{
+            width: 300px;
+            height: 300px;
+        }
     </style>
     <style>
         @media screen and (max-width: 730px) {
@@ -144,7 +149,19 @@
             }
         }
     </style>
-
+    <script>
+        const container = document.querySelector(".wrapper-app-container");
+        const htmlPC=container.innerHTML;
+        const htmlMB = "Hãy mở bằng máy tính"
+        window.addEventListener('resize', ()=>{
+            if (window.innerWidth < 740){
+                container.innerHTML = htmlMB;
+            } else{
+                container.innerHTML = htmlPC;
+                console.log(container.innerHTML);
+            }
+        })
+    </script>
     <style>
       
     </style>

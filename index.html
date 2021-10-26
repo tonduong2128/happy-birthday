@@ -16,6 +16,8 @@
 <body>
     
     <div class="wrapper-app" style="position: relative;">
+
+        <div class="notice-mobile">Let open this website on PC or laptop </div> 
         <div class="wrapper-app-container text-center container d-flex flex-column align-items-center h-100" style="font-family: 'PT Sans Caption', sans-serif;">
             <div class="app-title pt-3 text-center" 
             >Happy Birthday To You</div>
@@ -25,7 +27,7 @@
                     class="btn btn-outline-danger button-custom">No No
                 </button>
                 <button id="button-custom" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal2"  
-                    class="btn btn-outline-danger button-custom">Challenges
+                    class="btn btn-outline-danger button-custom">Wishes
                 </button>
                 <div class="position-absolute btn-agree" style="z-index: 2;">
                     <button type="button" class="btn btn-primary button-custom" >
@@ -92,14 +94,17 @@
         <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLabel">Có làm thì mới có ăn !!!</h5>
+            <h5 class="modal-title" id="exampleModalLabel">Nothing here</h5>
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
-        <div class="modal-body">
-            <h5 class="modal-title" id="exampleModalLabel">Tính tích phân sau</h5>
-            <img src="./img/math.PNG" style="width:100%;" alt="">
-            <label for="example">Đán án</label>
-            <input id="example" />
+        <div class="modal-body"  style="text-align: center;">
+            <h5 class="modal-title" id="exampleModalLabel">No name</h5>
+            <div class="avata" style="text-align: center;">
+                <img src="data:image/jpeg;base64,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" style="border-radius:50%;" alt="">
+            </div>
+            <div class="wishes">
+                Happy birthday to you and wish you all the best. Good one
+            </div>
             <!-- facebook: <a href="https://www.facebook.com/TonDuong.IT/" target="_blank" >facebook:</a>
             <br>
             phone: <a href="tel:0987795761">0987795761</a> -->
@@ -116,6 +121,9 @@
             margin: 0;
             padding: 0;
             box-sizing: border-box;
+        }
+        .notice-mobile{
+            display: none;
         }
         .wrapper-app{
             font-family: var(--bs-font-sans-serif);
@@ -145,25 +153,25 @@
                 font-size: 26px !important;
             }
             .button-custom{
-                font: size 14px;;
+                font-size:  14px;;
             }
         }
     </style>
-    <script>
-        const container = document.querySelector(".wrapper-app-container");
-        const htmlPC=container.innerHTML;
-        const htmlMB = "Hãy mở bằng máy tính"
-        window.addEventListener('resize', ()=>{
-            if (window.innerWidth < 740){
-                container.innerHTML = htmlMB;
-            } else{
-                container.innerHTML = htmlPC;
-                console.log(container.innerHTML);
-            }
-        })
-    </script>
     <style>
-      
+        @media (max-width:740px) {
+            .notice-mobile{
+                display:block;
+                height: 100vh;
+                width: 100%;
+                display: flex;
+                text-align: center;
+                justify-content:center;
+                align-items:center;
+            }
+            .wrapper-app-container{
+                display: none !important;
+            }
+        }
     </style>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>

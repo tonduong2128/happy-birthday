@@ -170,14 +170,23 @@
                 <h5 class="modal-title" id="exampleModalLabel"  style="text-align: left;">Chọn 1 trong 3 lá bài</h5>
                 <div class="container-fluid pt-3 ">
                     <ul class="row" style="list-style: none;">
-                        <li data-isopen="" class="col-4 a-card">
-                            <img src="./img/la-bai.png" style="width: 100%;" alt="">
+                        <li data-isopen="" class="col-4 ">
+                            <div class="img a-card">
+                                <img src="./img/la-bai.png" style="width: 100%;" alt="">
+                                <img hidden="true" src="https://media.istockphoto.com/vectors/playing-card-king-of-hearts-black-and-white-vector-id1151778820" style="width: 100%;" alt="">
+                            </div>
                         </li>
-                        <li data-isopen="" class="col-4 a-card"  >
-                            <img src="./img/la-bai.png" style="width: 100%;" alt="">
+                        <li data-isopen="" class="col-4 "  >
+                            <div class="img a-card">
+                                <img src="./img/la-bai.png" style="width: 100%;" alt="">
+                                <img hidden="true" src="https://media.istockphoto.com/vectors/playing-card-king-of-hearts-black-and-white-vector-id1151778820" style="width: 100%;" alt="">
+                            </div> 
                         </li>
-                        <li data-isopen="" class="col-4 a-card">
-                            <img src="./img/la-bai.png"  style="width: 100%;" alt="">
+                        <li data-isopen="" class="col-4 ">
+                            <div class="img a-card">
+                                <img src="./img/la-bai.png"  style="width: 100%;" alt="">
+                                <img hidden="true" src="https://media.istockphoto.com/vectors/playing-card-king-of-hearts-black-and-white-vector-id1151778820" style="width: 100%;" alt="">
+                            </div>
                         </li>
                     </ul>
                 </div>
@@ -349,7 +358,10 @@
             };
     cards.map((card)=>{
         var isOpen = false;
+        var childNodes = card.querySelectorAll("div > *");
         const handleClick = (e)=>{
+            var width = card.childNodes[1].offsetWidth ?card.childNodes[1].offsetWidth:width ;
+            var height = card.childNodes[1].offsetHeight ?card.childNodes[1].offsetHeight:height ;
             if (Boolean(card.dataset.isopen)){
                 isOpen = false;
                 card.dataset.isopen = "";
@@ -357,23 +369,27 @@
                 isOpen = true;
                 card.dataset.isopen = "1";
             }
-            console.log(isOpen);
             const animate = card.animate(animateCard,optionAnimateCard)
-            animate.onfinish = () => {
-                var src = "https://cdn.w600.comps.canstockphoto.com/playing-card-jack-of-spades-black-and-drawing_csp60881596.jpg";
+            animate.onfinish = () => {  
+                card.style.width = `${width}px`; 
+                card.style.height = `${height}px`; 
                 if (!isOpen){
-                    src = "./img/la-bai.png"
+                    childNodes[0].removeAttribute("hidden")
+                    childNodes[1].hidden="true"
+                } else{
+                    childNodes[0].hidden="true"
+                    childNodes[1].removeAttribute("hidden")
                 }
-               
-                card.childNodes[1].src = src;
             }
         }
         card.addEventListener("click",handleClick)
     })
     btnResetCard.addEventListener("click", ()=>{
         cards.map((card)=>{
-            card.dataset.isopen = "";
-            card.childNodes[1].src = "./img/la-bai.png";
+            var childNodes = card.querySelectorAll("div > *")
+            childNodes[0].removeAttribute("hidden")
+            childNodes[1].hidden="true"
+            card.dataset.isopen = ""
         })
     })
 </script>

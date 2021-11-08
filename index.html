@@ -49,13 +49,13 @@
                         <button id="button-custom" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal"  
                             class="btn btn-outline-danger button-custom">No No
                         </button>
-                        <audio src="./songs/happyBirthday.mp3"></audio>
                         <button id="button-custom" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal2"  
                         class="btn btn-outline-danger button-custom ml-1">Wishes
-                    </button>
-                    <button id="button-custom" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal3"  
-                        class="btn btn-outline-danger button-custom ml-1">Fortune telling
-                    </button>
+                        </button>
+                            <button id="button-custom" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal3"  
+                            class="btn btn-outline-danger button-custom ml-1">Fortune telling
+                        </button>
+                        <audio src="./songs/happyBirthday.mp3"></audio>
                         <div class="pause" style="position: relative; 
                             height: 50px; width: 50px; border-radius: 
                             50%; margin: 10px; box-shadow: 0px 0px 10px 10px rgba(0, 0, 0, 0.1);
@@ -171,21 +171,21 @@
                 <h5 class="modal-title" id="exampleModalLabel"  style="text-align: left;">Chọn 1 trong 3 lá bài</h5>
                 <div class="container-fluid pt-3 ">
                     <ul class="row" style="list-style: none;">
-                        <li data-isopen="" class="col-4 ">
+                        <li data-isopen="" class="col-4 item-card">
                             <div class="img a-card" style="display: flex;">
                                 <img src="./img/la-bai.png" style="width: 100%;" alt="">
                                 <div hidden="true " class="open-card" style="width: 100%; align-self:center; justify-self: center;">
                                 </div>    
                             </div>
                         </li>
-                        <li data-isopen="" class="col-4 "  >
+                        <li data-isopen="" class="col-4  item-card"  >
                             <div class="img a-card" style="display: flex;">
                                 <img src="./img/la-bai.png" style="width: 100%;" alt="">
                                 <div hidden="true " class="open-card" style="width: 100%; align-self:center; justify-self: center;">
                                 </div>    
                             </div> 
                         </li>
-                        <li data-isopen="" class="col-4 ">
+                        <li data-isopen="" class="col-4  item-card">
                             <div class="img a-card" style="display: flex;">
                                 <img src="./img/la-bai.png"  style="width: 100%;" alt="">
                                 <div hidden="true " class="open-card" style="width: 100%; align-self:center; justify-self: center;" >
@@ -200,7 +200,6 @@
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary btn-close-modal" data-bs-dismiss="modal"> Close </button>
-                <button type="button" class="btn btn-primary btn-next-modal" data-bs-dismiss="modal"> Next </button>
             </div>
         </div>
         </div>
@@ -279,6 +278,11 @@
             border: 1px solid #ccc !important;
             font-size: 24px;
             padding: 4px 10px;
+            
+        }
+        .item-card{
+            user-select:none;
+            cursor:pointer;
         }
     </style>
     <style>
@@ -409,13 +413,12 @@
     function randomCard(){
         const arrList =[
             "Có người yêu",
-            "Được học bổng",
             "Ế......",
+            "Được học bổng",
             "Gớt môn",
             "Trúng số. Cái này nói dỡ á",
-            "How are you",
-            "Im fine Hello",
-            "Alo Alo",
+            "我知道你會翻譯這個",
+            "Good one, Good one",
         ];
         const openCard =Array.from(document.querySelectorAll(".open-card"));
         const randoms=[];
